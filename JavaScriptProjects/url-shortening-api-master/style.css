@@ -1,0 +1,736 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.hider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:auto;
+    width: 100%;
+    background: none;
+    background-color: aqua;
+    gap: 30px; 
+    padding: 10px 10px 10px 10px;
+    border-radius: 2rem;
+    position: absolute;
+    left: -100px
+}
+
+.hide{
+    display: none;
+}
+
+#check:checked~ .hider{
+    position: relative;
+    display: flex;
+    left:300px;
+}
+
+.nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    padding-inline: 60px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.navbl,.navbr{
+    background-color: white;
+    font-weight: 700;
+    color: hsl(0, 0%, 75%);
+    font-size: 18px;
+    border: none;
+    
+}
+
+.navbr{
+    padding: 12px 24px; 
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.right{
+    display: flex;
+    gap: 40px;
+    margin-inline-end: 100px;
+}
+
+.img{
+    display: flex;
+    margin-top: 10px;
+}
+
+.navbl:hover{
+   color: hsl(257, 27%, 26%);
+}
+
+.navbr:hover{
+    
+    background-color: hsl(180, 66%, 49%);
+    color: white; 
+    border-radius: 12px; 
+    padding: 12px 24px; 
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; 
+    cursor: pointer; 
+}
+
+
+
+.title{
+    display: flex;
+    padding-left: 80px;
+    padding-top: 20px;
+    margin-block-start: 20px;
+    padding-inline-end: 0px;
+    margin-block-end: 100px;
+    margin-left: 40px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.text h1{
+    font-size: 80px;
+}
+
+.text p{
+    font-size: 20px;
+    color: hsl(0, 0%, 75%);
+    font-weight: 500;
+}
+
+.title img{
+  position: relative;
+  padding-left: 10px;
+  right: -8%;
+  display: flex;
+ 
+}
+
+/* .titlebtn{
+    border: none;
+    margin: 30px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(0, 0%, 75%);
+} */
+
+.titlebtn{
+    border: none;
+    margin: 30px;
+    background-color: hsl(180, 66%, 49%);
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+
+
+.workingarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: hsl(257, 7%, 63%); */
+    background-color: rgba(240,241,246,255);
+    padding-inline-end: 0px;
+    /* padding: 10px;    */
+
+}
+
+.imagebox{
+    width: 1200px;
+    height: 170px;
+    background-color: hsl(257, 7%, 63%);
+    background-image: url(./images/bg-boost-desktop.svg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin-left: 10vw;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1.1;
+    margin-block-end: 100px;
+}
+
+.searchbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bar{
+    width: 70%;
+    height: 60px;
+    border-radius: 1rem;
+    font-size: 18px;
+
+}
+
+.searchbar input{
+    padding-left: 20px;
+}
+
+.shortbtn{
+    width: 20%;
+    height: 60px;
+    border: none;
+    border-radius: 1rem;
+    background-color: hsl(180, 66%, 49%);
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.shortbtn{
+   cursor: pointer;
+}
+
+.prev{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pre{
+    width: 1200px;
+    height: 80px;
+    background-color: white;
+    border-radius: 1rem;   
+}
+
+.preset{
+    margin-inline: 60px;
+    margin-block: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.preright{
+    display: flex;
+    gap: 20px;
+    color: hsl(180, 66%, 49%);
+}
+
+.preright button{
+    border: none;
+    font-size: 18px;
+    background-color: hsl(180, 66%, 49%);
+    width: 100px;
+    height: 30px;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.preright button:hover{
+    cursor: pointer;
+}
+
+.notice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 50px;
+    gap: 20px;
+}
+
+.notice h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #3d3a43;
+    text-align: center;
+
+}
+
+.notice p{
+    font-size: 20px;
+    color: hsl(0, 0%, 75%);
+    font-weight: 700;
+    text-align: center;
+}
+
+.cardholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.cardholder:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 60px 20px 30px; 
+    width: 300px;
+    height: 250px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #392f53;
+    border-radius: 50%; /* Makes a circular container */
+    width: 80px; /* Icon container size */
+    height: 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure icon appears above card */
+}
+
+.icon img {
+    width: 50px; 
+    height: 50px;
+}
+
+.card h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: #3d3a43;
+    margin: 30px 0 10px; 
+    text-align: start;
+
+}
+
+.card p{
+    color: hsl(0, 0%, 75%);
+    font-weight: 700;
+    text-align:left;
+    
+}
+
+.lastcontent{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/bg-boost-desktop.svg);
+    background-color: #3a3053;
+}
+
+.lastcontent h1{
+    color: white;
+    /* padding: 40px;*/
+    overflow: hidden; 
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.lastcontent button{
+    width: 180px;
+}
+
+.base{
+    width: 100%;
+    height: 300px;
+    background-color: hsl(260, 8%, 14%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+    flex-wrap: wrap;
+    
+}
+
+.basediv1 img{
+    fill: #fff;
+    margin-top: 80%;
+}
+
+.basediv2,.basediv3,.basediv4{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basediv2 h1,.basediv3 h1,.basediv4 h1{
+    font-size: 18px;
+    margin-block-start: 80px;
+    margin-block-end:20px;
+}
+
+.basediv2 p,.basediv3 p,.basediv4 p{
+    font-weight: 600;
+    color: hsl(0, 0%, 75%);
+    gap: 20px;
+}
+
+.basediv5{  
+    display: flex;
+    justify-content: center;
+    align-items: content ;
+    margin-block-start: 80px;
+    gap: 20px;
+    padding: 5px;
+}
+
+.basediv5 img{
+    opacity: 0.7;
+
+}
+
+.basediv5 img:hover{
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* For Tablets (Width between 600px and 1024px) */
+@media (max-width: 1024px) {
+
+    .body{
+       width: 100%;
+       background-color: white;
+    }
+    
+
+    .hide{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        /* margin-inline: 30px; */
+    }
+
+    .btn_one{
+        color: black;
+    }
+    
+    .hider{
+        display: flex;
+    }
+    
+    .btn_one:hover{
+        font-size: 20px;
+    }
+    
+   
+
+  
+    
+    /* #check{
+        display: none;
+    } */
+    
+    .nav {
+        
+        width: 90%;
+        margin-top: 2px;
+        margin-left: 2px;
+        padding: 5px;
+        display: flex;
+        margin-right: 2px;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        background: none;
+        background-color: aliceblue;
+        align-items: center;
+        display: none;
+    }
+
+    .navbl, .navbr {
+        font-size: 16px;
+        padding: 8px 16px;
+        display: block;
+        background: none;
+    }
+
+    .left, .right {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    .title {
+        margin-block-end: 60px;
+        padding: 5px;
+        margin-left: 0px;
+        flex-direction: column-reverse;
+        gap: 40px;
+        background-color: aliceblue;
+    }
+    
+    .imag{
+       position: relative;
+       width: 100%;
+       height: auto;
+    }
+
+    .text{
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .titlebtn {
+        font-size: 18px;
+        width: 140px;
+        height: 45px;
+    }
+
+    .workingarea {
+        padding-inline-end: 20px;
+    }
+   
+    .prev{
+      display: none;
+    }
+
+    .imagebox {
+        width: 90%;
+        height: 160px;
+        margin-left: 5vw;
+    }
+    
+    .searchbar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bar,.searchbar button{
+        margin: 0;
+        padding: 0;
+        width: 80%;
+    }
+    
+    .notice{
+        display: flex;
+        align-items: center;
+    }
+
+    .notice h1{
+        font-size: 22px;
+    }
+
+    .notice p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .cardholder {
+        padding: 30px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .card {
+        width: 250px;
+        height: auto;
+        padding: 40px 20px 20px;
+        margin-bottom: 20px;
+        gap: 1px;
+    }
+    
+    /* .icon{
+        position: absolute;
+        margin-top: -40px;
+        z-index: 10;
+    } */
+    
+    .card h1{
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .card p{
+      font-size: 125x;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .content{
+         width: 100%;
+    }
+
+    .lastcontent{
+        background-image: url("./images/bg-boost-mobile.svg");
+        /* background-repeat: no-repeat; */
+        width: 115%;
+    }
+
+    .lastcontent h1 {
+        font-size: 20px;
+    }
+
+    .base {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .basediv1 img {
+        margin-top: 50%;
+    }
+
+    .basediv2, .basediv3, .basediv4 {
+        align-items: center;
+    }
+
+    .basediv5{
+        margin-block-end: 40px;
+    }
+
+}
+
+/* For Mobile Screens (Width below 600px)
+@media (max-width: 599px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .nav {
+        flex-direction: column;
+        padding-inline: 20px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .navbl, .navbr {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .left, .right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .title {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .text h1 {
+        font-size: 36px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .titlebtn {
+        font-size: 16px;
+        width: 130px;
+        height: 40px;
+    }
+
+    .workingarea {
+        padding-inline-end: 10px;
+    }
+
+    .imagebox {
+        width: 90%;
+        height: 140px;
+        margin-left: 0;
+    }
+
+    .cardholder {
+        padding: 20px 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+        padding: 30px 10px 20px;
+        margin-bottom: 15px;
+    }
+
+    .lastcontent h1 {
+        font-size: 24px;
+    }
+
+    .base {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .basediv1 img {
+        margin-top: 50%;
+    }
+
+    .basediv2, .basediv3, .basediv4 {
+        align-items: center;
+    }
+} */
+

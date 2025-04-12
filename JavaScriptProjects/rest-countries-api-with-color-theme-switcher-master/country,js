@@ -1,0 +1,75 @@
+const countryName = new URLSearchParams(location.search).get('name');
+// console.log(new URLSearchParams(location.search).get('name'));
+const flagimage=document.querySelector('.details img');
+const  nativename=document.querySelector('.nativename');
+const  population=document.querySelector('.Population');
+const  region=document.querySelector('.Region');
+const  capital=document.querySelector('.Capital');
+const  topleveldomain=document.querySelector('.topleveldomain');
+const  currencies=document.querySelector('.Currencies');
+const  languages=document.querySelector('.languages');
+const  title=document.querySelector('.title');
+const subregion=document.querySelector('.subregion');
+const borderCountries=document.querySelector('.bordercs');
+
+
+fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
+.then((res) => res.json())
+ .then(([country]) => {
+         console.log(country);
+        // console.log(country.flags.svg);
+        flagimage.src = country.flags.svg;
+
+        title.innerText=country.name.common;
+        
+        region.innerText = country.region;
+
+        if (country.name.nativeName) {
+            nativename.innerText = Object.values(country.name.nativeName)[0].common
+          } else {
+            nativename.innerText = country.name.common
+          }
+
+        population.innerText=country.population;
+
+        if(country.capital){
+            capital.innerText=country.capital;
+        }
+        
+        if(country.tld)
+        {
+            topleveldomain.innerText=country.tld.join(', ');
+        }
+        
+        if (country.currencies) {
+            currencies.innerText = Object.values(country.currencies)
+              .map((currency) => currency.name)
+              .join(', ')
+          }
+      
+          if (country.languages) {
+            languages.innerText = Object.values(country.languages).join(', ')
+          }
+
+          if (country.subregion) {
+            subregion.innerText = country.subregion
+          }
+
+
+          if (country.borders) {
+      
+            country.borders.forEach((border) => {
+              fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+                .then((res) => res.json())
+                .then(([borderCountry]) => {
+                  console.log(borderCountry.name);
+                  const borderCountryTag = document.createElement('a');
+                  borderCountryTag.classList.add('neighbour');
+                  borderCountryTag.innerText = borderCountry.name.common;
+                  borderCountryTag.href = `country.html?name=${borderCountry.name.common}`
+                  borderCountries.append(borderCountryTag);
+                })
+            })
+          }
+
+    });

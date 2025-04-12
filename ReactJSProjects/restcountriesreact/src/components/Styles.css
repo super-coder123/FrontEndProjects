@@ -1,0 +1,30 @@
+
+.but1{
+    background-color: #EEEEEE;
+    color: black;
+    font-weight: 700;
+    padding: 2;
+    width: 100px;
+    margin-left: 50px;
+    box-shadow: mediumorchid;
+}
+
+.but2{
+    background-color: 1F2937;
+    color: white;
+    font-weight: 700;
+    padding: 2;
+    width: 100px;
+    margin-left: 50px;
+    box-shadow: mediumorchid; 
+}
+
+.button1{
+    background-color:#f3f4f6;
+    color: black;
+}
+
+.button2{
+    background-color:#111827;
+    color: white;
+}
